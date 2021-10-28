@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Bold.eot');
+    src: url('Iosevka-Curly-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Bold.woff2') format('woff2'),
+        url('Iosevka-Curly-Bold.woff') format('woff'),
+        url('Iosevka-Curly-Bold.ttf') format('truetype'),
+        url('Iosevka-Curly-Bold.svg#Iosevka-Curly-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Bold-Italic.eot');
+    src: url('Iosevka-Curly-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Bold-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Bold-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Bold-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Bold-Italic.svg#Iosevka-Curly-Bold-Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Oblique';
+    src: url('Iosevka-Curly-Bold-Oblique.eot');
+    src: url('Iosevka-Curly-Bold-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Bold-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Bold-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Bold-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Bold-Oblique.svg#Iosevka-Curly-Bold-Oblique') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Extrabold.eot');
+    src: url('Iosevka-Curly-Extrabold.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extrabold.woff2') format('woff2'),
+        url('Iosevka-Curly-Extrabold.woff') format('woff'),
+        url('Iosevka-Curly-Extrabold.ttf') format('truetype'),
+        url('Iosevka-Curly-Extrabold.svg#Iosevka-Curly-Extrabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Extrabold-Italic.eot');
+    src: url('Iosevka-Curly-Extrabold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extrabold-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Extrabold-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Extrabold-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Extrabold-Italic.svg#Iosevka-Curly-Extrabold-Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly XBdObl';
+    src: url('Iosevka-Curly-Extrabold-Oblique.eot');
+    src: url('Iosevka-Curly-Extrabold-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extrabold-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Extrabold-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Extrabold-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Extrabold-Oblique.svg#Iosevka-Curly-Extrabold-Oblique') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Extralight.eot');
+    src: url('Iosevka-Curly-Extralight.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extralight.woff2') format('woff2'),
+        url('Iosevka-Curly-Extralight.woff') format('woff'),
+        url('Iosevka-Curly-Extralight.ttf') format('truetype'),
+        url('Iosevka-Curly-Extralight.svg#Iosevka-Curly-Extralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Extralight-Italic.eot');
+    src: url('Iosevka-Curly-Extralight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extralight-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Extralight-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Extralight-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Extralight-Italic.svg#Iosevka-Curly-Extralight-Italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly XLtObl';
+    src: url('Iosevka-Curly-Extralight-Oblique.eot');
+    src: url('Iosevka-Curly-Extralight-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Extralight-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Extralight-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Extralight-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Extralight-Oblique.svg#Iosevka-Curly-Extralight-Oblique') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Heavy.eot');
+    src: url('Iosevka-Curly-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Heavy.woff2') format('woff2'),
+        url('Iosevka-Curly-Heavy.woff') format('woff'),
+        url('Iosevka-Curly-Heavy.ttf') format('truetype'),
+        url('Iosevka-Curly-Heavy.svg#Iosevka-Curly-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Heavy-Italic.eot');
+    src: url('Iosevka-Curly-Heavy-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Heavy-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Heavy-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Heavy-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Heavy-Italic.svg#Iosevka-Curly-Heavy-Italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Heavy Oblique';
+    src: url('Iosevka-Curly-Heavy-Oblique.eot');
+    src: url('Iosevka-Curly-Heavy-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Heavy-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Heavy-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Heavy-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Heavy-Oblique.svg#Iosevka-Curly-Heavy-Oblique') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Italic.eot');
+    src: url('Iosevka-Curly-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Italic.svg#Iosevka-Curly-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Light.eot');
+    src: url('Iosevka-Curly-Light.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Light.woff2') format('woff2'),
+        url('Iosevka-Curly-Light.woff') format('woff'),
+        url('Iosevka-Curly-Light.ttf') format('truetype'),
+        url('Iosevka-Curly-Light.svg#Iosevka-Curly-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Light-Italic.eot');
+    src: url('Iosevka-Curly-Light-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Light-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Light-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Light-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Light-Italic.svg#Iosevka-Curly-Light-Italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Light Oblique';
+    src: url('Iosevka-Curly-Light-Oblique.eot');
+    src: url('Iosevka-Curly-Light-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Light-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Light-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Light-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Light-Oblique.svg#Iosevka-Curly-Light-Oblique') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Medium.eot');
+    src: url('Iosevka-Curly-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Medium.woff2') format('woff2'),
+        url('Iosevka-Curly-Medium.woff') format('woff'),
+        url('Iosevka-Curly-Medium.ttf') format('truetype'),
+        url('Iosevka-Curly-Medium.svg#Iosevka-Curly-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Medium-Italic.eot');
+    src: url('Iosevka-Curly-Medium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Medium-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Medium-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Medium-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Medium-Italic.svg#Iosevka-Curly-Medium-Italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Oblique';
+    src: url('Iosevka-Curly-Oblique.eot');
+    src: url('Iosevka-Curly-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Oblique.svg#Iosevka-Curly-Oblique') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Medium Oblique';
+    src: url('Iosevka-Curly-Medium-Oblique.eot');
+    src: url('Iosevka-Curly-Medium-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Medium-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Medium-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Medium-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Medium-Oblique.svg#Iosevka-Curly-Medium-Oblique') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly.eot');
+    src: url('Iosevka-Curly.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly.woff2') format('woff2'),
+        url('Iosevka-Curly.woff') format('woff'),
+        url('Iosevka-Curly.ttf') format('truetype'),
+        url('Iosevka-Curly.svg#Iosevka-Curly') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Semibold.eot');
+    src: url('Iosevka-Curly-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Semibold.woff2') format('woff2'),
+        url('Iosevka-Curly-Semibold.woff') format('woff'),
+        url('Iosevka-Curly-Semibold.ttf') format('truetype'),
+        url('Iosevka-Curly-Semibold.svg#Iosevka-Curly-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Semibold-Italic.eot');
+    src: url('Iosevka-Curly-Semibold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Semibold-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Semibold-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Semibold-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Semibold-Italic.svg#Iosevka-Curly-Semibold-Italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Semibold Oblique';
+    src: url('Iosevka-Curly-Semibold-Oblique.eot');
+    src: url('Iosevka-Curly-Semibold-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Semibold-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Semibold-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Semibold-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Semibold-Oblique.svg#Iosevka-Curly-Semibold-Oblique') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly Thin Oblique';
+    src: url('Iosevka-Curly-Thin-Oblique.eot');
+    src: url('Iosevka-Curly-Thin-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Thin-Oblique.woff2') format('woff2'),
+        url('Iosevka-Curly-Thin-Oblique.woff') format('woff'),
+        url('Iosevka-Curly-Thin-Oblique.ttf') format('truetype'),
+        url('Iosevka-Curly-Thin-Oblique.svg#Iosevka-Curly-Thin-Oblique') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Thin.eot');
+    src: url('Iosevka-Curly-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Thin.woff2') format('woff2'),
+        url('Iosevka-Curly-Thin.woff') format('woff'),
+        url('Iosevka-Curly-Thin.ttf') format('truetype'),
+        url('Iosevka-Curly-Thin.svg#Iosevka-Curly-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Curly';
+    src: url('Iosevka-Curly-Thin-Italic.eot');
+    src: url('Iosevka-Curly-Thin-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Iosevka-Curly-Thin-Italic.woff2') format('woff2'),
+        url('Iosevka-Curly-Thin-Italic.woff') format('woff'),
+        url('Iosevka-Curly-Thin-Italic.ttf') format('truetype'),
+        url('Iosevka-Curly-Thin-Italic.svg#Iosevka-Curly-Thin-Italic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
