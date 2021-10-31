@@ -4,6 +4,43 @@
 
 @charset "utf-8";
 
+// FUNCTIONS
+
+@mixin indent-sibling-elements-except-itself(
+	$element,
+	$indent,
+	$unit
+) {
+	#{$element} {
+		& ~ *:not(&) {
+			margin-left: #{$indent}#{$unit};
+		}
+	}
+}
+
+@mixin heading-indent-increment(
+	$start-h,
+	$end-h,
+	$start-i,
+	$increment-i,
+	$unit-i
+) {
+	@include indent-sibling-elements-except-itself(
+		h#{$start-h},
+		$start-i,
+		$unit-i
+	);
+	@if $start-h != $end-h {
+		@include heading-indent-increment(
+			$start-h + 1,
+			$end-h,
+			$start-i + $increment-i,
+			$increment-i,
+			$unit-i
+		);
+	}
+}
+
 /* FONTS */
 
 @font-face {
@@ -108,6 +145,11 @@ $o0: #fe8019;
 $o1: #d65d0e;
 $o2: #af3a03;
 
+// Others
+
+$gap: 1rem;
+$border-radius: 1rem;
+
 /* Globals */
 
 * {
@@ -149,7 +191,7 @@ body {
 	background-color: $bg0h;
 	color: $fg0h;
 	line-height: 1.4rem;
-	margin: 0 1rem;
+	margin: 0 $gap;
 }
 
 header,
@@ -158,13 +200,13 @@ main,
 footer {
 	background-color: $bg0;
 	padding: 0.5rem;
-	border-radius: 1rem;
+	border-radius: $border-radius;
 	overflow: hidden;
 }
 
 header,
 footer {
-	margin: 1rem 0;
+	margin: $gap 0;
 }
 
 header {
@@ -177,7 +219,7 @@ header {
 
 #principal {
 	display: flex;
-	gap: 1rem;
+	gap: $gap;
 	flex-flow: row;
 }
 
@@ -186,23 +228,26 @@ nav {
 	min-width: min-content;
 	height: max-content;
 	position: sticky;
-	top: 1rem;
+	top: $gap;
 
 	li {
 		list-style-type: none;
 
 		&:first-child a {
 			margin-top: calc(0.5rem - 0.2em);
+			border-radius: $border-radius $border-radius 0 0;
 		}
 
 		&:last-child a {
 			margin-bottom: calc(0.5rem - 0.2em);
+			border-radius: 0 0 $border-radius $border-radius;
 		}
 
 		a {
 			text-align: center;
 			font-size: 1.2rem;
 			display: block;
+			margin: 0 calc(0.5rem - 0.2em);
 			color: $m1;
 			padding: 0.2em 0.5rem;
 			position: relative;
@@ -222,11 +267,20 @@ main {
 	flex-grow: 1;
 
 	img,
-	video {
-		max-width: 100%;
+	video,
+	audio {
+		max-width: 90%;
 		max-height: 50vh;
 		display: block;
 		margin: 0 auto;
+		border-radius: $border-radius;
+	}
+
+	@include heading-indent-increment(2, 6, 1, 1, 'rem');
+
+	h1,
+	h2 {
+		line-height: 1em;
 	}
 
 	h1 {
@@ -234,33 +288,22 @@ main {
 		font-weight: 900;
 		color: $c1;
 		text-align: center;
-		line-height: 1em;
 		margin: 0.5rem 0;
 		letter-spacing: -0.05em;
 	}
 	
 	h2 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 700;
 		color: $b1;
-		line-height: 1em;
-		margin: 1rem 0 0.5rem;
+		margin: $gap 0 0.5rem;
 		letter-spacing: -0.02em;
-
-		& ~ *:not(&) {
-			margin-left: 1rem;
-		}
 	}
 
 	h3 {
     font-size: 1.5rem;
     color: $y1;
     margin: 0.8rem 0 0.2rem;
-		margin-left: 2rem;
-
-		& ~ *:not(&) {
-			margin-left: 2rem;
-		}
 	}
 	
 	h4,
@@ -269,30 +312,6 @@ main {
     font-size: 1.2rem;
     color: $g1;
     margin: 0.6rem 0 0.2rem;
-	}
-	
-	h4 {
-		margin-left: 3rem;
-
-		& ~ *:not(&) {
-			margin-left: 3rem;
-		}
-	}
-	
-	h5 {
-		margin-left: 4rem;
-
-		& ~ *:not(&) {
-			margin-left: 4rem;
-		}
-	}
-	
-	h6 {
-		margin-left: 5rem;
-
-		& ~ *:not(&) {
-			margin-left: 5rem;
-		}
 	}
 	
 	p {
@@ -384,20 +403,19 @@ main {
 			transform: scale(0);
 			transition-duration: 0.5s;
 			transition-timing-function: cubic-bezier(0.05, -0.15, 1, 1.11);
+			border-radius: 0.4em;
 		}
 
 		&::before {
 			border-bottom: 1px solid $m2;
 			border-left: 1px solid $m2;
 			transform-origin: 0 100%;
-			border-radius: 0.4em;
 		}
 
 		&::after {
 			border-top: 1px solid $m2;
 			border-right: 1px solid $m2;
 			transform-origin: 100% 0;
-			border-radius: 0.4em;
 		}
 	}
 
@@ -413,16 +431,13 @@ main {
 	}
 	
 	#icon {
-		&-twitter img {
+		&-twitter img,
+		&-arrow-up img {
 			width: 3rem;
 		}
 		
 		&-arrow-up {
 			padding: 0.2rem 0;
-			
-			img {
-				width: 3rem;
-			}
 		}
 	}
 	
@@ -461,8 +476,11 @@ main {
 		&-form {
 			&-varied {
 				display: grid;
+				width: max-content;
 				grid-column-gap: 1em;
 				grid-row-gap: 1em;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				grid-template-rows: repeat(2, auto);
 				grid-template-areas:
 					"items  items"
 					"submit clear";
@@ -473,7 +491,7 @@ main {
 					grid-template-areas:
 						"collapse-select check radio"
 						"select          check radio";
-					grid-template-columns: repeat(3, max-content);
+					grid-template-columns: repeat(3, minmax(0, 1fr));
 					grid-template-rows: repeat(2, auto);
 					grid-column-gap: 1em;
 					grid-row-gap: 1em;
@@ -542,7 +560,7 @@ main {
 		padding: 0.5rem;
 		border: 1px solid $fg4;
 		width: min-content;
-		border-radius: 1rem;
+		border-radius: $border-radius;
 
 		input,
 		select,
@@ -604,6 +622,7 @@ main {
 		label {
 			display: block;
 			margin: 0.5rem 0 0.2rem;
+			text-indent: 0.2em;
 			
 			input {
 				display: inline-block;
@@ -709,23 +728,44 @@ footer {
 	}
 
 	main {
-		#custom-form-html5 {
-			grid-template-columns: repeat(1, minmax(0, 1fr));
-			grid-template-rows: repeat(13, auto);
-			grid-template-areas:
-				"email"
-				"telefono"
-				"url"
-				"fecha-larga"
-				"hora"
-				"fecha"
-				"semana"
-				"mes"
-				"numero"
-				"rango"
-				"color"
-				"archivo"
-				"enviar";
+		form {
+			width: auto;
+
+			textarea {
+				width: 100%;
+			}
+		}
+		
+		#custom-form {
+			&-varied {
+				width: auto;
+				> div {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					grid-template-rows: repeat(2, auto);
+					grid-template-areas:
+						"collapse-select check"
+						"select          radio";
+				}
+			}
+
+			&-html5 {
+				grid-template-columns: repeat(1, minmax(0, 1fr));
+				grid-template-rows: repeat(13, auto);
+				grid-template-areas:
+					"email"
+					"telefono"
+					"url"
+					"fecha-larga"
+					"hora"
+					"fecha"
+					"semana"
+					"mes"
+					"numero"
+					"rango"
+					"color"
+					"archivo"
+					"enviar";
+			}
 		}
 	}
 }

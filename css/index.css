@@ -95,13 +95,16 @@ nav {
   nav li {
     list-style-type: none; }
     nav li:first-child a {
-      margin-top: calc(0.5rem - 0.2em); }
+      margin-top: calc(0.5rem - 0.2em);
+      border-radius: 1rem 1rem 0 0; }
     nav li:last-child a {
-      margin-bottom: calc(0.5rem - 0.2em); }
+      margin-bottom: calc(0.5rem - 0.2em);
+      border-radius: 0 0 1rem 1rem; }
     nav li a {
       text-align: center;
       font-size: 1.2rem;
       display: block;
+      margin: 0 calc(0.5rem - 0.2em);
       color: #b16286;
       padding: 0.2em 0.5rem;
       position: relative;
@@ -115,11 +118,23 @@ nav {
 main {
   flex-grow: 1; }
   main img,
-  main video {
-    max-width: 100%;
+  main video,
+  main audio {
+    max-width: 90%;
     max-height: 50vh;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    border-radius: 1rem; }
+  main h2 ~ *:not(main h2) {
+    margin-left: 1rem; }
+  main h3 ~ *:not(main h3) {
+    margin-left: 2rem; }
+  main h4 ~ *:not(main h4) {
+    margin-left: 3rem; }
+  main h5 ~ *:not(main h5) {
+    margin-left: 4rem; }
+  main h6 ~ *:not(main h6) {
+    margin-left: 5rem; }
   main h1 {
     font-size: 3rem;
     font-weight: 900;
@@ -129,39 +144,22 @@ main {
     margin: 0.5rem 0;
     letter-spacing: -0.05em; }
   main h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #458588;
     line-height: 1em;
     margin: 1rem 0 0.5rem;
     letter-spacing: -0.02em; }
-    main h2 ~ *:not(main h2) {
-      margin-left: 1rem; }
   main h3 {
     font-size: 1.5rem;
     color: #d79921;
-    margin: 0.8rem 0 0.2rem;
-    margin-left: 2rem; }
-    main h3 ~ *:not(main h3) {
-      margin-left: 2rem; }
+    margin: 0.8rem 0 0.2rem; }
   main h4,
   main h5,
   main h6 {
     font-size: 1.2rem;
     color: #98971a;
     margin: 0.6rem 0 0.2rem; }
-  main h4 {
-    margin-left: 3rem; }
-    main h4 ~ *:not(main h4) {
-      margin-left: 3rem; }
-  main h5 {
-    margin-left: 4rem; }
-    main h5 ~ *:not(main h5) {
-      margin-left: 4rem; }
-  main h6 {
-    margin-left: 5rem; }
-    main h6 ~ *:not(main h6) {
-      margin-left: 5rem; }
   main p + p {
     margin-top: 1rem; }
   main table {
@@ -274,14 +272,17 @@ main {
         padding: 0.4em 0; }
   main #custom-form-varied {
     display: grid;
+    width: max-content;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
     grid-template-areas: "items  items" "submit clear"; }
     main #custom-form-varied > div {
       grid-area: items;
       display: grid;
       grid-template-areas: "collapse-select check radio" "select          check radio";
-      grid-template-columns: repeat(3, max-content);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-template-rows: repeat(2, auto);
       grid-column-gap: 1em;
       grid-row-gap: 1em; }
@@ -395,7 +396,8 @@ main {
       min-width: 15em; }
     main form label {
       display: block;
-      margin: 0.5rem 0 0.2rem; }
+      margin: 0.5rem 0 0.2rem;
+      text-indent: 0.2em; }
       main form label input {
         display: inline-block; }
   main sub, main sup {
@@ -452,6 +454,16 @@ footer .postamble {
     font-size: 14px;
     line-height: 1.1rem; }
 
+  main form {
+    width: auto; }
+    main form textarea {
+      width: 100%; }
+  main #custom-form-varied {
+    width: auto; }
+    main #custom-form-varied > div {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "collapse-select check" "select          radio"; }
   main #custom-form-html5 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-template-rows: repeat(13, auto);
