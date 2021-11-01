@@ -238,6 +238,21 @@ footer {
 header {
 	@include prefix(text-align, center);
 
+	&::before {
+		@include prefix(content, quote('"Herramientas utilizadas:"'));
+		@include prefix(font-size, 0.8rem);
+		@include prefix(display, block);
+		@include prefix(transition-duration, .2s);
+		@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
+		@include prefix(height, 0);
+		@include prefix(opacity, 0);
+	}
+
+	&:hover::before {
+		@include prefix(height, 2em);
+		@include prefix(opacity, 1);
+	}
+
 	span {
 		@include prefix(position, relative);
 
@@ -246,7 +261,7 @@ header {
 			@include prefix(position, absolute);
 			@include prefix(opacity, 0);
 			@include prefix(z-index, 1);
-			@include prefix(right, -60%);
+			@include prefix(right, -40%);
 			@include prefix(bottom, 0);
 			@include prefix(padding, 0 0.4em);
 			@include prefix(border-radius, 0 0.5em 0.5em);
@@ -255,6 +270,7 @@ header {
 			@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
 			@include prefix(transition-delay, .3s);
 			@include prefix(pointer-events, none);
+			@include prefix(font-size, 0.7rem);
 		}
 
 		&:hover {
