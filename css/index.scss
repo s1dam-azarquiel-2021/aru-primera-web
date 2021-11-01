@@ -175,364 +175,364 @@ $border-radius: 1rem;
 /* Globals */
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-	font-size: 1rem;
-	font: inherit;
+	@include prefix(box-sizing, border-box);
+	@include prefix(margin, 0);
+	@include prefix(padding, 0);
+	@include prefix(border, 0);
+	@include prefix(vertical-align, baseline);
+	@include prefix(font-size, 1rem);
+	@include prefix(font, inherit);
 }
 
 ol,
 ul {
 	li {
-		list-style-position: inside;
+		@include prefix(list-style-position, inside);
 	}
 	
 	& & > li {
-		margin-left: 1em;
+		@include prefix(margin-left, 1em);
 	}
 }
 
 a {
-	text-decoration: none;
-	cursor: pointer;
+	@include prefix(text-decoration, none);
+	@include prefix(cursor, pointer);
 }
 
 /* END */
 
 html {
-	scrollbar-width: none;
+	@include prefix(scrollbar-width, none);
 }
 
 body {
-	font-family: 'Iosevka Curly', monospace;
-	font-size: 18px;
-	font-weight: 500;
-	background-color: $bg0h;
-	color: $fg0h;
-	line-height: 1.4rem;
-	margin: 0 $gap;
+	@include prefix(font-family, 'Iosevka Curly', monospace);
+	@include prefix(font-size, 18px);
+	@include prefix(font-weight, 500);
+	@include prefix(background-color, $bg0h);
+	@include prefix(color, $fg0h);
+	@include prefix(line-height, 1.4rem);
+	@include prefix(margin, 0 $gap);
 }
 
 header,
 nav,
 main,
 footer {
-	background-color: $bg0;
-	padding: 0.5rem;
-	border-radius: $border-radius;
-	overflow: hidden;
+	@include prefix(background-color, $bg0);
+	@include prefix(padding, 0.5rem);
+	@include prefix(border-radius, $border-radius);
+	@include prefix(overflow, hidden);
 }
 
 header,
 footer {
-	margin: $gap 0;
+	@include prefix(margin, $gap 0);
 }
 
 header {
-	text-align: center;
+	@include prefix(text-align, center);
 
 	span {
-		position: relative;
+		@include prefix(position, relative);
 
 		&::before {
-			content: attr(hover-text);
-			position: absolute;
-			opacity: 0;
-			z-index: 1;
-			right: -60%;
-			bottom: 0;
-			padding: 0 0.4em;
-			border-radius: 0 0.5em 0.5em;
-			background-color: #{$bg2}d4;
-			transition-duration: .2s;
-			transition-timing-function: cubic-bezier(.46, .03, .52, .96);
-			transition-delay: .3s;
-			pointer-events: none;
+			@include prefix(content, attr(hover-text));
+			@include prefix(position, absolute);
+			@include prefix(opacity, 0);
+			@include prefix(z-index, 1);
+			@include prefix(right, -60%);
+			@include prefix(bottom, 0);
+			@include prefix(padding, 0 0.4em);
+			@include prefix(border-radius, 0 0.5em 0.5em);
+			@include prefix(background-color, #{$bg2}d4);
+			@include prefix(transition-duration, .2s);
+			@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
+			@include prefix(transition-delay, .3s);
+			@include prefix(pointer-events, none);
 		}
 
 		&:hover {
 			&::before {
-				opacity: 1;
+				@include prefix(opacity, 1);
 			}
 
 			img {
-				rotate: 360deg;
+				@include prefix(rotate, 360deg);
 			}
 		}
 
 		img {
-			height: 3rem;
-			cursor: pointer;
-			transition-duration: .4s;
-			transition-timing-function: cubic-bezier(.46, .03, .52, .96);
+			@include prefix(height, 3rem);
+			@include prefix(cursor, pointer);
+			@include prefix(transition-duration, .4s);
+			@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
 		}
 	}
 }
 
 #principal {
-	display: flex;
-	gap: $gap;
-	flex-flow: row;
+	@include prefix(display, flex);
+	@include prefix(gap, $gap);
+	@include prefix(flex-flow, row);
 }
 
 nav {
-	padding: 0;
-	min-width: min-content;
-	height: max-content;
-	position: sticky;
-	top: $gap;
+	@include prefix(padding, 0);
+	@include prefix(min-width, min-content);
+	@include prefix(height, max-content);
+	@include prefix(position, sticky);
+	@include prefix(top, $gap);
 
 	li {
-		list-style-type: none;
+		@include prefix(list-style-type, none);
 
 		&:first-child a {
-			margin-top: calc(0.5rem - 0.2em);
-			border-radius: $border-radius $border-radius 0 0;
+			@include prefix(margin-top, calc(0.5rem - 0.2em));
+			@include prefix(border-radius, $border-radius $border-radius 0 0);
 		}
 
 		&:last-child a {
-			margin-bottom: calc(0.5rem - 0.2em);
-			border-radius: 0 0 $border-radius $border-radius;
+			@include prefix(margin-bottom, calc(0.5rem - 0.2em));
+			@include prefix(border-radius, 0 0 $border-radius $border-radius);
 		}
 
 		a {
-			text-align: center;
-			font-size: 1.2rem;
-			display: block;
-			margin: 0 calc(0.5rem - 0.2em);
-			color: $m1;
-			padding: 0.2em 0.5rem;
-			position: relative;
-			letter-spacing: -0.02em;
-			transition-duration: .2s;
-			transition-timing-function: cubic-bezier(.46, .03, .52, .96);
+			@include prefix(text-align, center);
+			@include prefix(font-size, 1.2rem);
+			@include prefix(display, block);
+			@include prefix(margin, 0 calc(0.5rem - 0.2em));
+			@include prefix(color, $m1);
+			@include prefix(padding, 0.2em 0.5rem);
+			@include prefix(position, relative);
+			@include prefix(letter-spacing, -0.02em);
+			@include prefix(transition-duration, .2s);
+			@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
 
 			&:hover {
-				background-color: $m1;
-				color: $bg1;
+				@include prefix(background-color, $m1);
+				@include prefix(color, $bg1);
 			}
 		}
 	}
 }
 
 main {
-	flex-grow: 1;
+	@include prefix(flex-grow, 1);
 
 	img,
 	video,
 	audio {
-		max-width: 90%;
-		max-height: 50vh;
-		display: block;
-		margin: 0 auto;
-		border-radius: $border-radius;
+		@include prefix(max-width, 90%);
+		@include prefix(max-height, 50vh);
+		@include prefix(display, block);
+		@include prefix(margin, 0 auto);
+		@include prefix(border-radius, $border-radius);
 	}
 
 	@include heading-indent-increment(2, 6, 1, 1, 'rem');
 
 	h1,
 	h2 {
-		line-height: 1em;
+		@include prefix(line-height, 1em);
 	}
 
 	h1 {
-		font-size: 3rem;
-		font-weight: 900;
-		color: $c1;
-		text-align: center;
-		margin: 0.5rem 0;
-		letter-spacing: -0.05em;
+		@include prefix(font-size, 3rem);
+		@include prefix(font-weight, 900);
+		@include prefix(color, $c1);
+		@include prefix(text-align, center);
+		@include prefix(margin, 0.5rem 0);
+		@include prefix(letter-spacing, -0.05em);
 	}
 	
 	h2 {
-		font-size: 1.8rem;
-		font-weight: 700;
-		color: $b1;
-		margin: $gap 0 0.5rem;
-		letter-spacing: -0.02em;
+		@include prefix(font-size, 1.8rem);
+		@include prefix(font-weight, 700);
+		@include prefix(color, $b1);
+		@include prefix(margin, $gap 0 0.5rem);
+		@include prefix(letter-spacing, -0.02em);
 	}
 
 	h3 {
-    font-size: 1.5rem;
-    color: $y1;
-    margin: 0.8rem 0 0.2rem;
+		@include prefix(font-size, 1.5rem);
+		@include prefix(color, $y1);
+		@include prefix(margin, 0.8rem 0 0.2rem);
 	}
 	
 	h4,
 	h5,
 	h6 {
-    font-size: 1.2rem;
-    color: $g1;
-    margin: 0.6rem 0 0.2rem;
+		@include prefix(font-size, 1.2rem);
+		@include prefix(color, $g1);
+		@include prefix(margin, 0.6rem 0 0.2rem);
 	}
 	
 	p {
 		+ p {
-			margin-top: 1rem;
+			@include prefix(margin-top, 1rem);
 		}
 	}
 
 	table {
-		border-collapse: collapse;
-		display: block;
-		overflow-x: auto;
+		@include prefix(border-collapse, collapse);
+		@include prefix(display, block);
+		@include prefix(overflow-x, auto);
 		
 		th,
 		td {
-			border: 1px solid $fg4;
-			padding: 0.3rem;
-			color: $fg1;
+			@include prefix(border, 1px solid $fg4);
+			@include prefix(padding, 0.3rem);
+			@include prefix(color, $fg1);
 		}
 		
 		th {
-			background-color: $bg1;
-			font-size: 1.1em;
-			font-weight: 700;
+			@include prefix(background-color, $bg1);
+			@include prefix(font-size, 1.1em);
+			@include prefix(font-weight, 700);
 		}
 		
 		td {
-			background-color: $bg2;
+			@include prefix(background-color, $bg2);
 		}
 		
 		.color-even-rows tr:nth-child(even) td {
-			background-color: adjust-color($bg2, $lightness: +5%);
+			@include prefix(background-color, adjust-color($bg2, $lightness: +5%));
 		}
 	}
 	
 	#horario {
 		th,
 		td {
-			border: 1px solid #000;
-			vertical-align: middle;
+			@include prefix(border, 1px solid #000);
+			@include prefix(vertical-align, middle);
 		}
 		
 		th {
-			background-color: #f0f0f0;
-			color: #008080;
+			@include prefix(background-color, #f0f0f0);
+			@include prefix(color, #008080);
 		}
 		
 		td {
-			color: #000;
+			@include prefix(color, #000);
 		}
 		
-		.lmsg { background-color: #00b95c; }
-		.ing  { background-color: #80ff81; }
-		.prog { background-color: #80ffff; }
-		.sisi { background-color: #ff8002; }
-		.ende { background-color: #8080c0; }
-		.bdd  { background-color: #64aa96; }
-		.fol  { background-color: #f0f0c8; }
+		.lmsg { @include prefix(background-color, #00b95c); }
+		.ing  { @include prefix(background-color, #80ff81); }
+		.prog { @include prefix(background-color, #80ffff); }
+		.sisi { @include prefix(background-color, #ff8002); }
+		.ende { @include prefix(background-color, #8080c0); }
+		.bdd  { @include prefix(background-color, #64aa96); }
+		.fol  { @include prefix(background-color, #f0f0c8); }
 	}
 
 	a {
-		display: inline-block;
-		color: $m1;
-		padding: 0 0.2em;
-		border: 1px solid transparent;
-		border-radius: 0.4em;
-		position: relative;
-		transition-duration: 0.5s;
-		transition-timing-function: cubic-bezier(0.05, -0.15, 1, 1.11);
+		@include prefix(display, inline-block);
+		@include prefix(color, $m1);
+		@include prefix(padding, 0 0.2em);
+		@include prefix(border, 1px solid transparent);
+		@include prefix(border-radius, 0.4em);
+		@include prefix(position, relative);
+		@include prefix(transition-duration, 0.5s);
+		@include prefix(transition-timing-function, cubic-bezier(0.05, -0.15, 1, 1.11));
 
 		&:hover {
-			background-color: $bg1;
+			@include prefix(background-color, $bg1);
 
 			&::after,
 			&::before {
-				transform: scale(1);
+				@include prefix(transform, scale(1));
 			}
 		}
 
 		&::before,
 		&::after {
-			width: 100%;
-			height: 100%;
-			z-index: 3;
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			transform: scale(0);
-			transition-duration: 0.5s;
-			transition-timing-function: cubic-bezier(0.05, -0.15, 1, 1.11);
-			border-radius: 0.4em;
+			@include prefix(width, 100%);
+			@include prefix(height, 100%);
+			@include prefix(z-index, 3);
+			@include prefix(content, '');
+			@include prefix(position, absolute);
+			@include prefix(top, 0);
+			@include prefix(left, 0);
+			@include prefix(transform, scale(0));
+			@include prefix(transition-duration, 0.5s);
+			@include prefix(transition-timing-function, cubic-bezier(0.05, -0.15, 1, 1.11));
+			@include prefix(border-radius, 0.4em);
 		}
 
 		&::before {
-			border-bottom: 1px solid $m2;
-			border-left: 1px solid $m2;
-			transform-origin: 0 100%;
+			@include prefix(border-bottom, 1px solid $m2);
+			@include prefix(border-left, 1px solid $m2);
+			@include prefix(transform-origin, 0 100%);
 		}
 
 		&::after {
-			border-top: 1px solid $m2;
-			border-right: 1px solid $m2;
-			transform-origin: 100% 0;
+			@include prefix(border-top, 1px solid $m2);
+			@include prefix(border-right, 1px solid $m2);
+			@include prefix(transform-origin, 100% 0);
 		}
 	}
 
 	.src {
 		&-inline {
-			display: inline-block;
-			background-color: $bg2;
-			padding: 0 0.3em;
-			margin: 0 calc(0.2em - 1px);
-			border: 1px solid $fg4;
-			border-radius: 0.4em;
+			@include prefix(display, inline-block);
+			@include prefix(background-color, $bg2);
+			@include prefix(padding, 0 0.3em);
+			@include prefix(margin, 0 calc(0.2em - 1px));
+			@include prefix(border, 1px solid $fg4);
+			@include prefix(border-radius, 0.4em);
 		}
 	}
 	
 	#icon {
 		&-twitter img,
 		&-arrow-up img {
-			width: 3rem;
+			@include prefix(width, 3rem);
 		}
 		
 		&-arrow-up {
-			padding: 0.2rem 0;
+			@include prefix(padding, 0.2rem 0);
 		}
 	}
 	
 	#custom {
 		&-list {
-			padding: 0.5em;
-			border-radius: 1.5em;
-			border: 1px solid $bg1;
-			list-style-position: inside;
+			@include prefix(padding, 0.5em);
+			@include prefix(border-radius, 1.5em);
+			@include prefix(border, 1px solid $bg1);
+			@include prefix(list-style-position, inside);
 			
 			li {
-				list-style-type: none;
+				@include prefix(list-style-type, none);
 			}
 			
 			> li {
-				background-color: $bg1;
-				border-radius: 1em;
-				overflow: auto;
-				margin: 0;
-				padding-top: 0.4em;
-				text-indent: 0.4em;
+				@include prefix(background-color, $bg1);
+				@include prefix(border-radius, 1em);
+				@include prefix(overflow, auto);
+				@include prefix(margin, 0);
+				@include prefix(padding-top, 0.4em);
+				@include prefix(text-indent, 0.4em);
 				
 				+ li {
-					margin-top: 0.5em;
+					@include prefix(margin-top, 0.5em);
 				}
 				
 				> ol,
 				> ul {
-					margin-top: 0.2em;
-					background-color: $bg2;
-					padding: 0.4em 0;
+					@include prefix(margin-top, 0.2em);
+					@include prefix(background-color, $bg2);
+					@include prefix(padding, 0.4em 0);
 
 					> li li {
-						position: relative;
+						@include prefix(position, relative);
 
 						&::before {
-							position: absolute;
-							left: -1em;
-							width: 1em;
-							content: '▸';
+							@include prefix(position, absolute);
+							@include prefix(left, -1em);
+							@include prefix(width, 1em);
+							@include prefix(content, '▸');
 						}
 					}
 				}
@@ -541,282 +541,304 @@ main {
 
 		&-form {
 			&-varied {
-				display: grid;
-				width: max-content;
-				grid-column-gap: 1em;
-				grid-row-gap: 1em;
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				grid-template-rows: repeat(2, auto);
-				grid-template-areas:
+				@include prefix(display, grid);
+				@include prefix(width, max-content);
+				@include prefix(grid-column-gap, 1em);
+				@include prefix(grid-row-gap, 1em);
+				@include prefix(grid-template-columns, repeat(2, minmax(0, 1fr)));
+				@include prefix(grid-template-rows, repeat(2, auto));
+				@include prefix(
+					grid-template-areas,
+					quote('
 					"items  items"
-					"submit clear";
+					"submit clear"
+					')
+				);
 
 				> div {
-					grid-area: items;
-					display: grid;
-					grid-template-areas:
+					@include prefix(grid-area, items);
+					@include prefix(display, grid);
+					@include prefix(
+						grid-template-areas,
+						quote('
 						"collapse-select check radio"
-						"select          check radio";
-					grid-template-columns: repeat(3, minmax(0, 1fr));
-					grid-template-rows: repeat(2, auto);
-					grid-column-gap: 1em;
-					grid-row-gap: 1em;
+						"select          check radio"
+						')
+					);
+					@include prefix(grid-template-columns, repeat(3, minmax(0, 1fr)));
+					@include prefix(grid-template-rows, repeat(2, auto));
+					@include prefix(grid-column-gap, 1em);
+					@include prefix(grid-row-gap, 1em);
 
-					> *:nth-child(1) { grid-area: collapse-select; }
-					> *:nth-child(2) { grid-area: select; }
-					> *:nth-child(3) { grid-area: check; }
-					> *:nth-child(4) { grid-area: radio; }
-					> *:nth-child(5) { grid-area: submit; }
-					> *:nth-child(6) { grid-area: clear; }
+					> *:nth-child(1) { @include prefix(grid-area, collapse-select); }
+					> *:nth-child(2) { @include prefix(grid-area, select); }
+					> *:nth-child(3) { @include prefix(grid-area, check); }
+					> *:nth-child(4) { @include prefix(grid-area, radio); }
+					> *:nth-child(5) { @include prefix(grid-area, submit); }
+					> *:nth-child(6) { @include prefix(grid-area, clear); }
 				}
 
-				> *:nth-child(2) { grid-area: submit; }
-				> *:nth-child(3) { grid-area: clear; }
+				> *:nth-child(2) { @include prefix(grid-area, submit); }
+				> *:nth-child(3) { @include prefix(grid-area, clear); }
 
 				input,
 				select,
 				textarea {
-					margin: 0;
+					@include prefix(margin, 0);
 				}
 
 				label:first-child {
-					margin-top: 0;
+					@include prefix(margin-top, 0);
 				}
 			}
 
 			&-html5 {
-				margin: 0 auto;
-				display: grid;
-				grid-column-gap: 1em;
-				width: auto;
-				grid-row-gap: 1em;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				grid-template-rows: repeat(5, auto);
-				grid-template-areas:
+				@include prefix(margin, 0 auto);
+				@include prefix(display, grid);
+				@include prefix(grid-column-gap, 1em);
+				@include prefix(width, auto);
+				@include prefix(grid-row-gap, 1em);
+				@include prefix(grid-template-columns, repeat(3, minmax(0, 1fr)));
+				@include prefix(grid-template-rows, repeat(5, auto));
+				@include prefix(
+					grid-template-areas,
+					quote('
 					"email  telefono url"
 					"hora   fecha    mes"
 					"semana numero   fecha-larga"
 					"rango  color    archivo"
-					"enviar enviar   enviar";
+					"enviar enviar   enviar"
+					')
+				);
 
-				> *:nth-child(1) { grid-area: email };
-				> *:nth-child(2) { grid-area: url };
-				> *:nth-child(3) { grid-area: telefono };
-				> *:nth-child(4) { grid-area: hora };
-				> *:nth-child(5) { grid-area: fecha };
-				> *:nth-child(6) { grid-area: mes };
-				> *:nth-child(7) { grid-area: semana };
-				> *:nth-child(8) { grid-area: fecha-larga };
-				> *:nth-child(9) { grid-area: numero };
-				> *:nth-child(10) { grid-area: rango };
-				> *:nth-child(11) { grid-area: archivo };
-				> *:nth-child(12) { grid-area: color };
-				> *:nth-child(13) { grid-area: enviar };
+				> *:nth-child(1)  { @include prefix(grid-area, email); }
+				> *:nth-child(2)  { @include prefix(grid-area, url); }
+				> *:nth-child(3)  { @include prefix(grid-area, telefono); }
+				> *:nth-child(4)  { @include prefix(grid-area, hora); }
+				> *:nth-child(5)  { @include prefix(grid-area, fecha); }
+				> *:nth-child(6)  { @include prefix(grid-area, mes); }
+				> *:nth-child(7)  { @include prefix(grid-area, semana); }
+				> *:nth-child(8)  { @include prefix(grid-area, fecha-larga); }
+				> *:nth-child(9)  { @include prefix(grid-area, numero); }
+				> *:nth-child(10) { @include prefix(grid-area, rango); }
+				> *:nth-child(11) { @include prefix(grid-area, archivo); }
+				> *:nth-child(12) { @include prefix(grid-area, color); }
+				> *:nth-child(13) { @include prefix(grid-area, enviar); }
 
 				label,
 				input {
-					margin: 0;
+					@include prefix(margin, 0);
 				}
 			}
 		}
 	}
 	
 	form {
-		padding: 0.5rem;
-		border: 1px solid $fg4;
-		width: min-content;
-		border-radius: $border-radius;
+		@include prefix(padding, 0.5rem);
+		@include prefix(border, 1px solid $fg4);
+		@include prefix(width, min-content);
+		@include prefix(border-radius, $border-radius);
 
 		input,
 		select,
 		textarea {
-			display: block;
-			background-color: $bg1;
-			background: linear-gradient(to left, $bg1 50%, $bg2 50%) right;
-			background-size: 200%;
-			color: $fg1;
-			border-radius: 0.4rem;
-			padding: 0.2em;
-			margin: 0.5rem 0 0.2rem;
-			transition-duration: .2s;
-			transition-timing-function: cubic-bezier(.77, 0, .18, 1);
+			@include prefix(display, block);
+			@include prefix(background-color, $bg1);
+			@include prefix(background, linear-gradient(to left, $bg1 50%, $bg2 50%) right);
+			@include prefix(background-size, 200%);
+			@include prefix(color, $fg1);
+			@include prefix(border-radius, 0.4rem);
+			@include prefix(padding, 0.2em);
+			@include prefix(margin, 0.5rem 0 0.2rem);
+			@include prefix(transition-duration, .2s);
+			@include prefix(transition-timing-function, cubic-bezier(.77, 0, .18, 1));
 
 			&:first-child {
-				margin-top: 0;
+				@include prefix(margin-top, 0);
 			}
 
 			&:last-child {
-				margin-bottom: 0;
+				@include prefix(margin-bottom, 0);
 			}
 
 			&:focus {
-				background-position: left;
+				@include prefix(background-position, left);
 			}
 		}
 		
 		input {
-			width: 100%;
+			@include prefix(width, 100%);
 
 			&[type=radio],
 			&[type=checkbox] {
-				width: auto;
+				@include prefix(width, auto);
 			}
 			
 			&[type="submit"],
 			&[type="reset"] {
-				cursor: pointer;
-				background: none;
-				background-color: $bg1;
-				transition-duration: .2s;
-				transition-timing-function: cubic-bezier(.46, .03, .52, .96);
-				position: relative;
+				@include prefix(cursor, pointer);
+				@include prefix(background, none);
+				@include prefix(background-color, $bg1);
+				@include prefix(transition-duration, .2s);
+				@include prefix(transition-timing-function, cubic-bezier(.46, .03, .52, .96));
+				@include prefix(position, relative);
 				
 				&:hover,
 				&:focus {
-					background-color: $fg1;
-					color: $bg1;
+					@include prefix(background-color, $fg1);
+					@include prefix(color, $bg1);
 				}
 			}
 		}
 
 		textarea {
-			min-height: 2em;
-			min-width: 15em;
+			@include prefix(min-height, 2em);
+			@include prefix(min-width, 15em);
 		}
 		
 		label {
-			display: block;
-			margin: 0.5rem 0 0.2rem;
-			text-indent: 0.2em;
+			@include prefix(display, block);
+			@include prefix(margin, 0.5rem 0 0.2rem);
+			@include prefix(text-indent, 0.2em);
 			
 			input {
-				display: inline-block;
+				@include prefix(display, inline-block);
 			}
 		}
 	}
 
 	sub, sup {
-		font-size: 0.75em;
-		line-height: 0;
-		position: relative;
-		vertical-align: baseline;
+		@include prefix(font-size, 0.75em);
+		@include prefix(line-height, 0);
+		@include prefix(position, relative);
+		@include prefix(vertical-align, baseline);
 	}
 
 	sup {
-		top: -0.5em;
+		@include prefix(top, -0.5em);
 	}
 
 	sub {
-		bottom: -0.5em;
+		@include prefix(bottom, -0.5em);
 	}
 
 	strong {
-		font-weight: 700;
+		@include prefix(font-weight, 700);
 	}
 
 	em {
-		font-style: italic;
+		@include prefix(font-style, italic);
 	}
 
 	dd {
-		margin-left: 1em;
+		@include prefix(margin-left, 1em);
 
 		+ dt {
-			margin-top: 0.5em;
+			@include prefix(margin-top, 0.5em);
 		}
 	}
 }
 
 footer {
 	.postamble {
-		text-align: right;
-		color: $fg3;
-		font-size: 0.9rem;
-		line-height: 1em;
+		@include prefix(text-align, right);
+		@include prefix(color, $fg3);
+		@include prefix(font-size, 0.9rem);
+		@include prefix(line-height, 1em);
 	}
 }
 
 .text {
 	&-center {
-		text-align: center;
+		@include prefix(text-align, center);
 	}
 
 	&-right {
-		text-align: right;
+		@include prefix(text-align, right);
 	}
 }
 
 .no {
 	&-scrollbar {
-		scrollbar-width: none;
+		@include prefix(scrollbar-width, none);
 	}
 
 	&-indent {
-		margin-left: 0;
+		@include prefix(margin-left, 0);
 	}
 }
 
 @media screen and (max-width: 800px) {
 	body {
-		font-size: 16px;
-		line-height: 1.2rem;
+		@include prefix(font-size, 16px);
+		@include prefix(line-height, 1.2rem);
 	}
 
 	#principal {
-		flex-flow: column;
+		@include prefix(flex-flow, column);
 	}
 	
 	nav {
-		position: initial;
+		@include prefix(position, initial);
 	}
 
 	main {
 		#custom-form-html5 {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-template-rows: repeat(7, auto);
-			grid-template-areas:
+			@include prefix(grid-template-columns, repeat(2, minmax(0, 1fr)));
+			@include prefix(grid-template-rows, repeat(7, auto));
+			@include prefix(
+				grid-template-areas,
+				quote('
 				"email  telefono"
 				"url    fecha-larga"
 				"hora   fecha"
 				"semana mes"
 				"numero rango"
 				"color  archivo"
-				"enviar enviar";
+				"enviar enviar"
+				')
+			);
 		}
 	}
 }
 
 @media screen and (max-width: 500px) {
 	body {
-		font-size: 14px;
-		line-height: 1.1rem;
+		@include prefix(font-size, 14px);
+		@include prefix(line-height, 1.1rem);
 	}
 
 	main {
 		form {
-			width: auto;
+			@include prefix(width, auto);
 
 			textarea {
-				width: 100%;
+				@include prefix(width, 100%);
 			}
 		}
 		
 		#custom-form {
 			&-varied {
-				width: auto;
+				@include prefix(width, auto);
 				> div {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-					grid-template-rows: repeat(2, auto);
-					grid-template-areas:
+					@include prefix(grid-template-columns, repeat(2, minmax(0, 1fr)));
+					@include prefix(grid-template-rows, repeat(2, auto));
+					@include prefix(
+						grid-template-areas,
+						quote('
 						"collapse-select check"
-						"select          radio";
+						"select          radio"
+						')
+					);
 				}
 			}
 
 			&-html5 {
-				grid-template-columns: repeat(1, minmax(0, 1fr));
-				grid-template-rows: repeat(13, auto);
-				grid-template-areas:
+				@include prefix(grid-template-columns, repeat(1, minmax(0, 1fr)));
+				@include prefix(grid-template-rows, repeat(13, auto));
+				@include prefix(
+					grid-template-areas,
+					quote('
 					"email"
 					"telefono"
 					"url"
@@ -829,7 +851,9 @@ footer {
 					"rango"
 					"color"
 					"archivo"
-					"enviar";
+					"enviar"
+					')
+				);
 			}
 		}
 	}
