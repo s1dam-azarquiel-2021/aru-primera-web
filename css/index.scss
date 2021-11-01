@@ -41,6 +41,10 @@
 	}
 }
 
+// For the sake of sanity use this regex
+// (used with search and replace in emacs evil mode)
+// s/\(^\t*\)\(.*\): \(.*\);/\1@include prefix(\2, /3);
+
 @mixin prefix(
 	$property,
 	$value...
