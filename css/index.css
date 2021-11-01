@@ -317,8 +317,7 @@ main {
       grid-template-rows: repeat(2, auto);
       grid-column-gap: 1em;
       grid-row-gap: 1em; }
-      main #custom-form-varied > div empty
-      > *:nth-child(1) {
+      main #custom-form-varied > div > *:nth-child(1) {
         grid-area: collapse-select; }
       main #custom-form-varied > div > *:nth-child(2) {
         grid-area: select; }

@@ -539,7 +539,6 @@ main {
 					grid-template-rows: repeat(2, auto);
 					grid-column-gap: 1em;
 					grid-row-gap: 1em;
-					empty
 
 					> *:nth-child(1) { grid-area: collapse-select; }
 					> *:nth-child(2) { grid-area: select; }
