@@ -13,7 +13,7 @@
 ) {
 	#{$element} {
 		& ~ *:not(&) {
-			margin-left: #{$indent}#{$unit};
+			@include prefix(margin-left, #{$indent}#{$unit});
 		}
 	}
 }
@@ -41,55 +41,77 @@
 	}
 }
 
+@mixin prefix(
+	$property,
+	$value...
+) {
+	$vendor-prefixes: ("-webkit-", "-moz-", "-o-", "-ms-", "");
+	@each $vendor-prefix in $vendor-prefixes {
+		#{$vendor-prefix}#{$property}: #{$value};
+	}
+}
+
+@mixin font-faces(
+	$font-family,
+	$font-weight,
+	$font-style,
+	$font-stretch,
+	$font-display,
+	$path,
+	$file-name
+) {
+	@font-face {
+		@include prefix(font-family, $font-family);
+		@include prefix(font-weight, $font-weight);
+		@include prefix(font-style, $font-style);
+		@include prefix(font-stretch, $font-stretch);
+		@include prefix(font-display, $font-display);
+		@include prefix(
+			src,
+			url('#{$path}/#{$file-name}.eot')
+		);
+		@include prefix(
+			src,
+			url('#{$path}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
+			url('#{$path}/#{$file-name}.woff2') format('woff2'),
+			url('#{$path}/#{$file-name}.woff') format('woff'),
+			url('#{$path}/#{$file-name}.ttf') format('truetype'),
+			url('#{$path}/#{$file-name}.svg##{$file-name}') format('svg')
+		);
+	}
+}
+
 /* FONTS */
 
-@font-face {
-	font-family: 'Iosevka Curly';
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
-	src:
-		url('fonts/medium/Iosevka-Curly-Medium.eot');
-	src:
-		url('fonts/medium/Iosevka-Curly-Medium.eot?#iefix') format('embedded-opentype'),
-		url('fonts/medium/Iosevka-Curly-Medium.woff2') format('woff2'),
-		url('fonts/medium/Iosevka-Curly-Medium.woff') format('woff'),
-		url('fonts/medium/Iosevka-Curly-Medium.ttf') format('truetype'),
-		url('fonts/medium/Iosevka-Curly-Medium.svg#Iosevka-Curly-Medium') format('svg');
-}
+@include font-faces(
+	'Iosevka Curly',
+	500,
+	normal,
+	normal,
+	swap,
+	'fonts/medium',
+	'Iosevka-Curly-Medium'
+);
 
-@font-face {
-	font-family: 'Iosevka Curly';
-	font-weight: 700;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
-	src:
-		url('fonts/bold/Iosevka-Curly-Bold.eot');
-	src:
-		url('fonts/bold/Iosevka-Curly-Bold.eot?#iefix') format('embedded-opentype'),
-		url('fonts/bold/Iosevka-Curly-Bold.woff2') format('woff2'),
-		url('fonts/bold/Iosevka-Curly-Bold.woff') format('woff'),
-		url('fonts/bold/Iosevka-Curly-Bold.ttf') format('truetype'),
-		url('fonts/bold/Iosevka-Curly-Bold.svg#Iosevka-Curly-Bold') format('svg');
-}
+@include font-faces(
+	'Iosevka Curly',
+	700,
+	normal,
+	normal,
+	swap,
+	'fonts/bold',
+	'Iosevka-Curly-Bold'
+);
 
-@font-face {
-	font-family: 'Iosevka Curly';
-	font-weight: 900;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
-	src:
-		url('fonts/heavy/Iosevka-Curly-Heavy.eot');
-	src:
-		url('fonts/heavy/Iosevka-Curly-Heavy.eot?#iefix') format('embedded-opentype'),
-		url('fonts/heavy/Iosevka-Curly-Heavy.woff2') format('woff2'),
-		url('fonts/heavy/Iosevka-Curly-Heavy.woff') format('woff'),
-		url('fonts/heavy/Iosevka-Curly-Heavy.ttf') format('truetype'),
-		url('fonts/heavy/Iosevka-Curly-Heavy.svg#Iosevka-Curly-Heavy') format('svg');
-}
+@include font-faces(
+	'Iosevka Curly',
+	900,
+	normal,
+	normal,
+	swap,
+	'fonts/heavy',
+	'Iosevka-Curly-Heavy'
+);
 
 // Backgrounds
 $bg0h: #1d2021;
