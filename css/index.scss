@@ -212,8 +212,41 @@ footer {
 header {
 	text-align: center;
 
-	img {
-		height: 3rem;
+	span {
+		position: relative;
+
+		&::before {
+			content: attr(hover-text);
+			position: absolute;
+			opacity: 0;
+			z-index: 1;
+			right: -60%;
+			bottom: 0;
+			padding: 0 0.4em;
+			border-radius: 0 0.5em 0.5em;
+			background-color: #{$bg2}d4;
+			transition-duration: .2s;
+			transition-timing-function: cubic-bezier(.46, .03, .52, .96);
+			transition-delay: .3s;
+			pointer-events: none;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+
+			img {
+				rotate: 360deg;
+			}
+		}
+
+		img {
+			height: 3rem;
+			cursor: pointer;
+			transition-duration: .4s;
+			transition-timing-function: cubic-bezier(.46, .03, .52, .96);
+		}
 	}
 }
 
@@ -469,6 +502,17 @@ main {
 					margin-top: 0.2em;
 					background-color: $bg2;
 					padding: 0.4em 0;
+
+					> li li {
+						position: relative;
+
+						&::before {
+							position: absolute;
+							left: -1em;
+							width: 1em;
+							content: '▸';
+						}
+					}
 				}
 			}
 		}
