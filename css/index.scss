@@ -451,7 +451,7 @@ main {
 			@include prefix(width, 100%);
 			@include prefix(height, 100%);
 			@include prefix(z-index, 3);
-			@include prefix(content, '');
+			@include prefix(content, quote('""'));
 			@include prefix(position, absolute);
 			@include prefix(top, 0);
 			@include prefix(left, 0);
@@ -532,7 +532,7 @@ main {
 							@include prefix(position, absolute);
 							@include prefix(left, -1em);
 							@include prefix(width, 1em);
-							@include prefix(content, '▸');
+							@include prefix(content, quote('"▸"'));
 						}
 					}
 				}
